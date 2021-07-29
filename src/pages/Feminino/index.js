@@ -1,8 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default function Feminino() {
  return (
-   <View/>
+   <View>
+       <Text>Feminino</Text>
+   </View>
   );
 }

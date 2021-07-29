@@ -46,8 +46,8 @@ export default function Home() {
                     </Button>}
                 >
                     
-                    <Menu.Item style={styles.masc} onPress={() => {}} title="Masculino" />
-                    <Menu.Item style={{ color: '#ff477e'}} onPress={() => {}} title="Feminino" />
+                    <Menu.Item onPress={() => navigation.navigate('Masculine')} title="Masculino" />
+                    <Menu.Item onPress={() => navigation.navigate('Feminine')} title="Feminino" />
                     <Divider />
                     <Menu.Item onPress={() => {}} title="Sneakers" />
                 </Menu>

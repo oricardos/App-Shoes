@@ -6,6 +6,8 @@ import { TouchableOpacity } from 'react-native';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
+import Masculino from './pages/Masculino';
+import Feminino from './pages/Feminino';
 
 
 const Stack = createStackNavigator();
@@ -33,6 +35,16 @@ function Routes(){
                             </TouchableOpacity>
                         )
                     }}
+                />
+                {/* GENRE PAGES */}
+                <Stack.Screen 
+                    name="Masculine"
+                    component={Masculino}
+                />
+
+                <Stack.Screen 
+                    name="Feminine"
+                    component={Feminino}
                 />
             </Stack.Navigator>
         </NavigationContainer>
