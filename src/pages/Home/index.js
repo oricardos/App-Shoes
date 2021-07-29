@@ -46,8 +46,8 @@ export default function Home() {
                     </Button>}
                 >
                     
-                    <Menu.Item onPress={() => {}} title="Masculino" />
-                    <Menu.Item onPress={() => {}} title="Feminino" />
+                    <Menu.Item style={styles.masc} onPress={() => {}} title="Masculino" />
+                    <Menu.Item style={{ color: '#ff477e'}} onPress={() => {}} title="Feminino" />
                     <Divider />
                     <Menu.Item onPress={() => {}} title="Sneakers" />
                 </Menu>
@@ -72,11 +72,11 @@ export default function Home() {
                 style={{ flexDirection: "row", justifyContent: "space-around" }}
             >
                 <Shoes
-                img={require("../../assets/1.png")}
-                cost="R$159,90"
+                img={{ uri: 'https://images.lojanike.com.br/768x768/produto/tenis-nike-sb-dunk-high-pro-unissex-DB1640-001-1-11624383716.jpg'}}
+                cost="R$ 699,99"
                 onClick={() => navigation.navigate("Detail")}
                 >
-                AIR FORCE 1
+                MAIZE AND BLACK
                 </Shoes>
                 <Shoes
                 img={require("../../assets/2.png")}
@@ -118,6 +118,12 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     backgroundColor: "#FFF",
+  },
+  masc:{
+    color: '#006ba6'
+  },
+  fem:{
+    color: '#ff477e'
   },
   header: {
     marginBottom: 8,
