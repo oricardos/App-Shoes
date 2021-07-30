@@ -11,12 +11,14 @@ import {
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-import { Button, Menu, Divider, Provider } from "react-native-paper";
+import { Button, Menu, Divider, Provider, TextInput } from "react-native-paper";
 
 import Shoes from "../../component/Shoes";
 
 export default function Home() {
 	const navigation = useNavigation();
+
+    const [text, setText] = React.useState('');
 
 	const [visible, setVisible] = React.useState(false);
 	const openMenu = () => setVisible(true);
@@ -67,6 +69,14 @@ export default function Home() {
 						>
 								LANÇAMENTOS
 						</Text>
+
+                        <View>
+                        <TextInput style={{ marginHorizontal: '5%'}}
+                            label="Email"
+                            value={text}
+                            onChangeText={text => setText(text)}
+                        />
+                        </View>
 
 						<View
 								style={{ flexDirection: "row", justifyContent: "space-around" }}

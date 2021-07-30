@@ -22,5 +22,6 @@ const styles = StyleSheet.create({
 	},
     image:{
         width: '100%',
+        marginVertical: '15%'
     }
 });
