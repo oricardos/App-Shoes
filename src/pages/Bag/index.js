@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, Text, Image, StyleSheet } from 'react-native';
 
-export default function Listen() {
+export default function Bag() {
  return (
    <ScrollView style={styles.container}>
        <Image

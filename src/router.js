@@ -3,13 +3,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { Feather, Entypo, FontAwesome5 } from '@expo/vector-icons';
+import { Feather, Entypo, SimpleLineIcons,AntDesign } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 
 import Home from './pages/Home';
-import Detail from './pages/Detail';
-import Listen from './pages/Listen';
+import Search from './pages/Search';
+import Bag from './pages/Bag';
 import Profile from './pages/Profile';
+import Favourites from './pages/Favourites';
 
 
 const Stack = createStackNavigator();
@@ -30,7 +31,7 @@ function Routes(){
 
             >
                 <Tab.Screen
-                    name="inicio"
+                    name="Home"
                     component={Home}
                     options={{
                         tabBarIcon: ({ size, color }) => (
@@ -39,31 +40,39 @@ function Routes(){
                     }}
                 />
                 <Tab.Screen 
-                    name="Detalhes"
-                    component={Detail}
+                    name="Search"
+                    component={Search}
                     options={{
                         tabBarIcon: ({ size, color }) => (
-                            <Entypo name="flash" size={size} color={color} />
+                            <Feather name="search" size={size} color={color} />
                         )
                     }}
                 />
-                {/* GENRE PAGES */}
-                <Stack.Screen 
-                    name="Ouvir"
-                    component={Listen}
+                <Tab.Screen
+                    name="Favourites"
+                    component={Favourites}
                     options={{
                         tabBarIcon: ({ size, color }) => (
-                            <FontAwesome5 name="music" size={size} color={color} />
+                            <AntDesign name="hearto" size={size} color={color}/>
+                        )
+                    }}
+                />
+                <Stack.Screen 
+                    name="Bag"
+                    component={Bag}
+                    options={{
+                        tabBarIcon: ({ size, color }) => (
+                            <SimpleLineIcons name="bag" size={size} color={color} />
                         )
                     }}
                 />
 
                 <Stack.Screen 
-                    name="Perfil"
+                    name="Profile"
                     component={Profile}
                     options={{
                         tabBarIcon: ({ size, color }) => (
-                            <FontAwesome5 name="user-alt" size={size} color={color} />
+                            <AntDesign name="user" size={size} color={color} />
                         )
                     }}
                 />
