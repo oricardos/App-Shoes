@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
-import FavouriteItem from "../../component/FavouriteItem";
-import PageTitle from "../../component/PageTitle";
+import FavouriteItem from "../../components/FavouriteItem";
+import PageTitle from "../../components/PageTitle";
 
 export default function Favourites() {
   return (

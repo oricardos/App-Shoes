@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from "react-native";
 
-import Shoes from '../../component/Shoes';
+import Shoes from '../../components/Shoes';
 
 
 export default function Search() {

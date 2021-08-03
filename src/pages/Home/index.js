@@ -11,8 +11,8 @@ import {
 
 import { Button, Menu, Divider, Provider, TextInput } from "react-native-paper";
 
-import Shoes from "../../component/Shoes";
-import LatestStories from "../../component/LatestStories";
+import Shoes from "../../components/Shoes";
+import LatestStories from "../../components/LatestStories";
 
 export default function Home() {
 	return (
