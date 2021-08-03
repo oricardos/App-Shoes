@@ -1,15 +1,11 @@
 import React from 'react';
 import { ScrollView, Text, Image, StyleSheet } from 'react-native';
+import PageTitle from '../../component/PageTitle';
 
 export default function Bag() {
  return (
    <ScrollView style={styles.container}>
-       <Image
-            style={styles.image}
-            source={require('../../assets/masculino.jpg')}
-            resizeMode="cover"
-       />
-       <Text> Listen</Text>
+       <PageTitle title="Bag" />
    </ScrollView>
   );
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import FavouriteItem from "../../component/FavouriteItem";
+import PageTitle from "../../component/PageTitle";
 
 export default function Favourites() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.text}>Favourites</Text>
+        <PageTitle title="Favourites" />
       </View>
 
       <View style={{ flexDirection: 'row', marginBottom: '5%'}}>
@@ -30,11 +31,5 @@ export default function Favourites() {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: "3%",
-    marginTop: "20%",
-  },
-  text: {
-    fontSize: 30,
-    fontWeight: "bold",
-    marginBottom: "3%",
   },
 });
