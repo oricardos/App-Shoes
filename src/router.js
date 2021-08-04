@@ -11,6 +11,7 @@ import Search from './pages/Search';
 import Bag from './pages/Bag';
 import Profile from './pages/Profile';
 import Favourites from './pages/Favourites';
+import Tests from "./pages/tests";
 
 
 const Stack = createStackNavigator();
@@ -73,6 +74,16 @@ function Routes(){
                     options={{
                         tabBarIcon: ({ size, color }) => (
                             <AntDesign name="user" size={size} color={color} />
+                        )
+                    }}
+                />
+
+                <Stack.Screen
+                    name="Tests"
+                    component={Tests}
+                    options={{
+                        tabBarIcon: ({ size, color }) => (
+                            <Feather name="code" size={size} color={color} />
                         )
                     }}
                 />
