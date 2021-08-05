@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import Shoes from "../../components/Shoes";
+import { useNavigation } from '@react-navigation/native'
 
 
 // IMPORT FOR TESTS
@@ -20,6 +21,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function Tests() {
+
+    const navigation = useNavigation();
+
+
     //COLLAPSED
     const [collapsed, setCollapsed] = React.useState(true)
 
@@ -185,6 +190,9 @@ export default function Tests() {
                     <Icon name="rocket" size={30} color="#900" />
                 }
             />
+
+
+            <Button onPress={() => navigation.navigate('Test2')} mode="contained" style={{ marginVertical: '5%'}}>Tests pt2</Button>
 
         </ScrollView>
     )
