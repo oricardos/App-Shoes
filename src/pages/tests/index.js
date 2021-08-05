@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import {Entypo} from "@expo/vector-icons";
 import Shoes from "../../components/Shoes";
 
@@ -35,7 +35,7 @@ export default function Tests() {
 
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             {/* COLLAPSED */}
             <Text>Collapse</Text>
             <Button onPress={handleClick} mode="contained"> Press</Button>
@@ -68,21 +68,50 @@ export default function Tests() {
                 Press me
             </Button>
             {/*  CARD  */}
-            <Card>
-                <Card.Cover source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
-                <Card.Title subtitle="27/05/2021"/>
-                <Card.Content>
-                    <Title>Facebook dobra lucro no segundo trimestre, mas espera crescer mais lentamente</Title>
-                    <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de publicidade da
-                        Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem permissão antes
-                        de coletas dados.</Paragraph>
-                </Card.Content>
-
-                <Card.Actions>
-                    <Button>LER MAIS</Button>
-                </Card.Actions>
-            </Card>
-        </View>
+            <ScrollView style={styles.viewCard} horizontal showsHorizontalScrollIndicator={false}>
+                <View style={{ flexDirection: 'row', width: '100vw' }} >
+                    <Card style={styles.card}>
+                        <Card.Cover source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
+                        <Card.Title subtitle="27/05/2021"/>
+                        <Card.Content>
+                            <Title>Facebook dobra lucro no segundo trimestre, mas espera crescer mais lentamente</Title>
+                            <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de publicidade da
+                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem permissão antes
+                                de coletas dados.</Paragraph>
+                        </Card.Content>
+                        <Card.Actions>
+                            <Button mode="contained">LER MAIS</Button>
+                        </Card.Actions>
+                    </Card>
+                    <Card style={styles.card}>
+                        <Card.Cover source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
+                        <Card.Title subtitle="27/05/2021"/>
+                        <Card.Content>
+                            <Title>Facebook dobra lucro no segundo trimestre, mas espera crescer mais lentamente</Title>
+                            <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de publicidade da
+                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem permissão antes
+                                de coletas dados.</Paragraph>
+                        </Card.Content>
+                        <Card.Actions>
+                            <Button mode="outlined">LER MAIS</Button>
+                        </Card.Actions>
+                    </Card>
+                    <Card style={styles.card}>
+                        <Card.Cover source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
+                        <Card.Title subtitle="27/05/2021"/>
+                        <Card.Content>
+                            <Title>Facebook dobra lucro no segundo trimestre, mas espera crescer mais lentamente</Title>
+                            <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de publicidade da
+                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem permissão antes
+                                de coletas dados.</Paragraph>
+                        </Card.Content>
+                        <Card.Actions>
+                            <Button mode="outlined">LER MAIS</Button>
+                        </Card.Actions>
+                    </Card>
+                </View>
+            </ScrollView>
+        </ScrollView>
     )
 };
 
@@ -93,5 +122,13 @@ const styles = StyleSheet.create({
     },
     input: {
         backgroundColor: 'transparent'
+    },
+    viewCard:{
+        width: '100%',
+    },
+    card: {
+        maxWidth: '80%',
+        marginBottom: '2%',
+        marginRight: '2%',
     }
 });
