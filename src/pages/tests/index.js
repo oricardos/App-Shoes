@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import Shoes from "../../components/Shoes";
 
 
@@ -9,11 +9,12 @@ import {
     List,
     TextInput,
     Button,
-    Avatar,
     Card,
     Title,
     Paragraph
 } from 'react-native-paper';
+
+import { ListItem } from 'react-native-elements'
 
 
 export default function Tests() {
@@ -25,7 +26,7 @@ export default function Tests() {
     }
 
     // LIST.ACCORDION
-    const [expanded, setExpanded] = React.useState(true);
+    const [expanded, setExpanded] = React.useState(false);
 
     const handlePress = () => setExpanded(!expanded);
 
@@ -74,9 +75,11 @@ export default function Tests() {
                             source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
                         <Card.Title subtitle="27/05/2021" style={{color: "#ff0000"}}/>
                         <Card.Content>
-                            <Title style={{marginBottom: '5%', fontWeight: 'bold'}}>Facebook dobra lucro no segundo trimestre, mas espera
+                            <Title style={{marginBottom: '5%', fontWeight: 'bold'}}>Facebook dobra lucro no segundo
+                                trimestre, mas espera
                                 crescer mais lentamente</Title>
-                            <Paragraph style={{ color: '#9E9E9E'}}>Expectativa de desaceleração se deve, especialmente, às novas regras de
+                            <Paragraph style={{color: '#9E9E9E'}}>Expectativa de desaceleração se deve, especialmente,
+                                às novas regras de
                                 publicidade da
                                 Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem
                                 permissão antes
@@ -126,6 +129,45 @@ export default function Tests() {
                     </Card>
                 </View>
             </ScrollView>
+
+            <View>
+                {/*<ListItem bottomDivider>*/}
+                {/*    <Avatar source={{ uri: 'https://picsum.photos/700' }} />*/}
+                {/*    <ListItem.Content>*/}
+                {/*        <ListItem.Title>Name</ListItem.Title>*/}
+                {/*        <ListItem.Subtitle>subtitle</ListItem.Subtitle>*/}
+                {/*    </ListItem.Content>*/}
+                {/*</ListItem>*/}
+            </View>
+
+            <ListItem.Accordion
+                content={
+                    <>
+                        <ListItem.Content>
+                            <ListItem.Title><Text>App Tutor</Text></ListItem.Title>
+                        </ListItem.Content>
+                    </>
+                }
+                isExpanded={expanded}
+                onPress={() => {
+                    setExpanded(!expanded);
+                }}
+            >
+                <ListItem>
+
+                    <ListItem.Content>
+                        <ListItem.Subtitle>
+                            <Text>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, sint, voluptate. At
+                                dignissimos et laboriosam nihil. Amet aperiam commodi consequuntur deserunt, distinctio
+                                dolor esse facere, impedit necessitatibus nisi officia tempore.
+                            </Text>
+                        </ListItem.Subtitle>
+                    </ListItem.Content>
+                    <ListItem.Chevron/>
+                </ListItem>
+            </ListItem.Accordion>
+
         </ScrollView>
     )
 };
@@ -134,6 +176,7 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         paddingHorizontal: '3%',
+        backgroundColor: '##F2F2F2',
     },
     input: {
         backgroundColor: 'transparent'
