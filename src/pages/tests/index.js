@@ -14,7 +14,9 @@ import {
     Paragraph
 } from 'react-native-paper';
 
-import { ListItem } from 'react-native-elements'
+import {ListItem, Input} from 'react-native-elements';
+
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function Tests() {
@@ -124,7 +126,6 @@ export default function Tests() {
                         </Card.Content>
                         <Card.Actions>
                             <Button mode="outlined">LER MAIS</Button>
-
                         </Card.Actions>
                     </Card>
                 </View>
@@ -154,7 +155,6 @@ export default function Tests() {
                 }}
             >
                 <ListItem>
-
                     <ListItem.Content>
                         <ListItem.Subtitle>
                             <Text>
@@ -168,6 +168,24 @@ export default function Tests() {
                 </ListItem>
             </ListItem.Accordion>
 
+            <Input
+                placeholder='BASIC INPUT'
+            />
+
+            <Input
+                placeholder='INPUT WITH ICON'
+                leftIcon={{type: 'font-awesome', name: 'chevron-left'}}
+            />
+
+            <Input
+                placeholder="Password"
+                secureTextEntry={true}
+                errorMessage="Senha incorreta"
+                rightIcon={
+                    <Icon name="rocket" size={30} color="#900" />
+                }
+            />
+
         </ScrollView>
     )
 };
@@ -179,7 +197,7 @@ const styles = StyleSheet.create({
         backgroundColor: '##F2F2F2',
     },
     input: {
-        backgroundColor: 'transparent'
+        // backgroundColor: 'transparent'
     },
     viewCard: {
         width: '100%',
