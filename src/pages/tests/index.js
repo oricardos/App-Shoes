@@ -20,6 +20,7 @@ import {ListItem, Input} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {AntDesign} from "@expo/vector-icons";
 import MenuOptions from "../../components/MenuOptions";
+import CollapseFAQ from "../../components/CollapseFAQ";
 
 
 export default function Tests() {
@@ -33,9 +34,6 @@ export default function Tests() {
     function handleClick() {
         setCollapsed(!collapsed)
     }
-
-    // LIST.ACCORDION
-    const [expanded, setExpanded] = React.useState(false);
 
     const handlePress = () => setExpanded(!expanded);
 
@@ -151,33 +149,22 @@ export default function Tests() {
                 {/*</ListItem>*/}
             </View>
             <View>
-                <ListItem.Accordion
-                    content={
-                        <>
-                            <ListItem.Content>
-                                <ListItem.Title><Text>App Tutor</Text></ListItem.Title>
-                            </ListItem.Content>
-                        </>
-                    }
-                    isExpanded={expanded}
-                    onPress={() => {
-                        setExpanded(!expanded);
-                    }}
-                >
-                    <ListItem>
-                        <ListItem.Content>
-                            <ListItem.Subtitle>
-                                <Text>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, sint, voluptate. At
-                                    dignissimos et laboriosam nihil. Amet aperiam commodi consequuntur deserunt,
-                                    distinctio
-                                    dolor esse facere, impedit necessitatibus nisi officia tempore.
-                                </Text>
-                            </ListItem.Subtitle>
-                        </ListItem.Content>
-                        <ListItem.Chevron/>
-                    </ListItem>
-                </ListItem.Accordion>
+                <CollapseFAQ
+                    title="App Tutor"
+                    text="
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequuntur dolor
+                       earum repudiandae rerum vitae voluptate! Aperiam aut excepturi, impedit nisi numquam placeat qui
+                       quibusdam ratione, similique, sit voluptatem!
+                    "
+                />
+                <CollapseFAQ
+                    title="App Tutossr"
+                    text="
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda consequuntur dolor
+                       earum repudiandae rerum vitae voluptate! Aperiam aut excepturi, impedit nisi numquam placeat qui
+                       quibusdam ratione, similique, sit voluptatem!
+                    "
+                />
             </View>
 
             <View>
@@ -207,18 +194,20 @@ export default function Tests() {
                 </TouchableOpacity>
             </View>
 
-            <MenuOptions
-                iconName="user"
-                text="Editar Perfil"
-            />
-            <MenuOptions
-                iconName="setting"
-                text="Configurações"
-            />
-            <MenuOptions
-                iconName="questioncircleo"
-                text="FAQ"
-            />
+            <View>
+                <MenuOptions
+                    iconName="user"
+                    text="Editar Perfil"
+                />
+                <MenuOptions
+                    iconName="setting"
+                    text="Configurações"
+                />
+                <MenuOptions
+                    iconName="questioncircleo"
+                    text="FAQ"
+                />
+            </View>
 
 
         </ScrollView>
