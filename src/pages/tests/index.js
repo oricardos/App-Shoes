@@ -1,6 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
-import {Entypo} from "@expo/vector-icons";
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Shoes from "../../components/Shoes";
 
 
@@ -69,27 +68,39 @@ export default function Tests() {
             </Button>
             {/*  CARD  */}
             <ScrollView style={styles.viewCard} horizontal showsHorizontalScrollIndicator={false}>
-                <View style={{ flexDirection: 'row', width: '100vw' }} >
+                <View style={{flexDirection: 'row', width: '100vw'}}>
                     <Card style={styles.card}>
-                        <Card.Cover source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
-                        <Card.Title subtitle="27/05/2021"/>
+                        <Card.Cover
+                            source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
+                        <Card.Title subtitle="27/05/2021" style={{color: "#ff0000"}}/>
                         <Card.Content>
-                            <Title>Facebook dobra lucro no segundo trimestre, mas espera crescer mais lentamente</Title>
-                            <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de publicidade da
-                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem permissão antes
+                            <Title style={{marginBottom: '5%', fontWeight: 'bold'}}>Facebook dobra lucro no segundo trimestre, mas espera
+                                crescer mais lentamente</Title>
+                            <Paragraph style={{ color: '#9E9E9E'}}>Expectativa de desaceleração se deve, especialmente, às novas regras de
+                                publicidade da
+                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem
+                                permissão antes
                                 de coletas dados.</Paragraph>
                         </Card.Content>
                         <Card.Actions>
-                            <Button mode="contained">LER MAIS</Button>
+                            <Button mode="contained" style={{
+                                width: '100%',
+                                marginVertical: '5%',
+                                backgroundColor: '#07F',
+                                paddingVertical: '2%'
+                            }}>LER MAIS</Button>
                         </Card.Actions>
                     </Card>
                     <Card style={styles.card}>
-                        <Card.Cover source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
+                        <Card.Cover
+                            source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
                         <Card.Title subtitle="27/05/2021"/>
                         <Card.Content>
                             <Title>Facebook dobra lucro no segundo trimestre, mas espera crescer mais lentamente</Title>
-                            <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de publicidade da
-                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem permissão antes
+                            <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de
+                                publicidade da
+                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem
+                                permissão antes
                                 de coletas dados.</Paragraph>
                         </Card.Content>
                         <Card.Actions>
@@ -97,16 +108,20 @@ export default function Tests() {
                         </Card.Actions>
                     </Card>
                     <Card style={styles.card}>
-                        <Card.Cover source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
-                        <Card.Title subtitle="27/05/2021"/>
+                        <Card.Cover
+                            source={{uri: 'https://images.unsplash.com/photo-1594670297948-e910d5964979?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1019&q=80'}}/>
+                        <Card.Title subtitle="27/05/2021" style={{fontSize: 140}}/>
                         <Card.Content>
                             <Title>Facebook dobra lucro no segundo trimestre, mas espera crescer mais lentamente</Title>
-                            <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de publicidade da
-                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem permissão antes
+                            <Paragraph>Expectativa de desaceleração se deve, especialmente, às novas regras de
+                                publicidade da
+                                Apple que, recentemente, começou a obrigar os criadores de aplicativos a pedirem
+                                permissão antes
                                 de coletas dados.</Paragraph>
                         </Card.Content>
                         <Card.Actions>
                             <Button mode="outlined">LER MAIS</Button>
+
                         </Card.Actions>
                     </Card>
                 </View>
@@ -123,12 +138,13 @@ const styles = StyleSheet.create({
     input: {
         backgroundColor: 'transparent'
     },
-    viewCard:{
+    viewCard: {
         width: '100%',
     },
     card: {
+        elevation: 5,
         maxWidth: '80%',
         marginBottom: '2%',
         marginRight: '2%',
-    }
+    },
 });
