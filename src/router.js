@@ -100,15 +100,15 @@ function Routes() {
                     }}
                 />
 
-                <Tab.Screen
-                    name="Tests2"
-                    component={SettingsStack}
-                    options={{
-                        tabBarIcon: ({size, color}) => (
-                            <Feather name="code" size={size} color={color}/>
-                        )
-                    }}
-                />
+                {/*<Tab.Screen*/}
+                {/*    name="Slide"*/}
+                {/*    component={SettingsStack}*/}
+                {/*    options={{*/}
+                {/*        tabBarIcon: ({size, color}) => (*/}
+                {/*            <Feather name="code" size={size} color={color}/>*/}
+                {/*        )*/}
+                {/*    }}*/}
+                {/*/>*/}
             </Tab.Navigator>
         </NavigationContainer>
     )

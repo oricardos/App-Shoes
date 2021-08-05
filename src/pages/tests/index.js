@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 import Shoes from "../../components/Shoes";
-import { useNavigation } from '@react-navigation/native'
+import {useNavigation} from '@react-navigation/native';
 
 
 // IMPORT FOR TESTS
@@ -18,6 +18,8 @@ import {
 import {ListItem, Input} from 'react-native-elements';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {AntDesign} from "@expo/vector-icons";
+import MenuOptions from "../../components/MenuOptions";
 
 
 export default function Tests() {
@@ -93,12 +95,15 @@ export default function Tests() {
                                 de coletas dados.</Paragraph>
                         </Card.Content>
                         <Card.Actions>
-                            <Button mode="contained" style={{
-                                width: '100%',
-                                marginVertical: '5%',
-                                backgroundColor: '#07F',
-                                paddingVertical: '2%'
-                            }}>LER MAIS</Button>
+                            <TouchableOpacity style={{width: '100%'}} onPress={() => navigation.navigate('Test2')}>
+                                <Button mode="contained" style={{
+                                    width: '100%',
+                                    marginVertical: '5%',
+                                    backgroundColor: '#07F',
+                                    paddingVertical: '2%'
+                                }}>LER MAIS</Button>
+                            </TouchableOpacity>
+
                         </Card.Actions>
                     </Card>
                     <Card style={styles.card}>
@@ -145,54 +150,76 @@ export default function Tests() {
                 {/*    </ListItem.Content>*/}
                 {/*</ListItem>*/}
             </View>
-
-            <ListItem.Accordion
-                content={
-                    <>
+            <View>
+                <ListItem.Accordion
+                    content={
+                        <>
+                            <ListItem.Content>
+                                <ListItem.Title><Text>App Tutor</Text></ListItem.Title>
+                            </ListItem.Content>
+                        </>
+                    }
+                    isExpanded={expanded}
+                    onPress={() => {
+                        setExpanded(!expanded);
+                    }}
+                >
+                    <ListItem>
                         <ListItem.Content>
-                            <ListItem.Title><Text>App Tutor</Text></ListItem.Title>
+                            <ListItem.Subtitle>
+                                <Text>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, sint, voluptate. At
+                                    dignissimos et laboriosam nihil. Amet aperiam commodi consequuntur deserunt,
+                                    distinctio
+                                    dolor esse facere, impedit necessitatibus nisi officia tempore.
+                                </Text>
+                            </ListItem.Subtitle>
                         </ListItem.Content>
-                    </>
-                }
-                isExpanded={expanded}
-                onPress={() => {
-                    setExpanded(!expanded);
-                }}
-            >
-                <ListItem>
-                    <ListItem.Content>
-                        <ListItem.Subtitle>
-                            <Text>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, sint, voluptate. At
-                                dignissimos et laboriosam nihil. Amet aperiam commodi consequuntur deserunt, distinctio
-                                dolor esse facere, impedit necessitatibus nisi officia tempore.
-                            </Text>
-                        </ListItem.Subtitle>
-                    </ListItem.Content>
-                    <ListItem.Chevron/>
-                </ListItem>
-            </ListItem.Accordion>
+                        <ListItem.Chevron/>
+                    </ListItem>
+                </ListItem.Accordion>
+            </View>
 
-            <Input
-                placeholder='BASIC INPUT'
+            <View>
+                <Input
+                    placeholder='BASIC INPUT'
+                />
+
+                <Input
+                    placeholder='INPUT WITH ICON'
+                    leftIcon={{type: 'font-awesome', name: 'chevron-left'}}
+                />
+
+                <Input
+                    placeholder="Password"
+                    secureTextEntry={true}
+                    errorMessage="Senha incorreta"
+                    rightIcon={
+                        <Icon name="rocket" size={30} color="#900"/>
+                    }
+                />
+            </View>
+
+            <View>
+                <TouchableOpacity>
+                    <Button mode="contained" style={{marginVertical: '5%'}}>Tests
+                        pt2</Button>
+                </TouchableOpacity>
+            </View>
+
+            <MenuOptions
+                iconName="user"
+                text="Editar Perfil"
+            />
+            <MenuOptions
+                iconName="setting"
+                text="Configurações"
+            />
+            <MenuOptions
+                iconName="questioncircleo"
+                text="FAQ"
             />
 
-            <Input
-                placeholder='INPUT WITH ICON'
-                leftIcon={{type: 'font-awesome', name: 'chevron-left'}}
-            />
-
-            <Input
-                placeholder="Password"
-                secureTextEntry={true}
-                errorMessage="Senha incorreta"
-                rightIcon={
-                    <Icon name="rocket" size={30} color="#900" />
-                }
-            />
-
-
-            <Button onPress={() => navigation.navigate('Test2')} mode="contained" style={{ marginVertical: '5%'}}>Tests pt2</Button>
 
         </ScrollView>
     )
