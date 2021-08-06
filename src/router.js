@@ -18,16 +18,6 @@ import Tests2 from "./pages/tests2";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// function SettingsStack() {
-//     return (
-//         <Stack.Navigator>
-//             <Stack.Screen
-//                 name="Test2"
-//                 component={Tests2}
-//             />
-//         </Stack.Navigator>
-//     )
-// }
 
 
 function Routes() {
@@ -35,11 +25,16 @@ function Routes() {
         <NavigationContainer>
             <Tab.Navigator
                 tabBarOptions={{
-                    style: {backgroundColor: '#121212', borderTopColor: 'transparent'},
-                    activeTintColor: '#FFF',
+                    showLabel:false,
+                    style: {
+                        backgroundColor: '#FFF',
+                        borderTopColor: '#C4C4C4',
+                        height: 100,
+                        elevation: 5,
+                    },
+                    activeTintColor: '#06f',
                     tabStyle: {
-                        paddingBottom: 5,
-                        paddingTop: 5,
+                        padding: 5,
                     }
                 }}
             >

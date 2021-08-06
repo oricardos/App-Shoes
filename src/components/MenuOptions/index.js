@@ -1,8 +1,8 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { AntDesign } from "@expo/vector-icons";
 
 import { Container, Option, TextOption } from "./styles";
+import {ChevronRight} from "@styled-icons/material";
 
 function Icon ({ children }) {
     return (
@@ -18,12 +18,12 @@ export default function MenuOptions({ text, icon }) {
             <TouchableOpacity>
                 <Container>
                     <Option>
-                        <Icon>
+                        <Icon style={{ color: '#A3A3A3'}}>
                             {icon}
                         </Icon>
                         <TextOption>{text}</TextOption>
                     </Option>
-                    <AntDesign name="right" size={20} color="#757D8A"/>
+                    <ChevronRight size="25" style={{ color: '#A3A3A3'}}/>
                 </Container>
             </TouchableOpacity>
         </>

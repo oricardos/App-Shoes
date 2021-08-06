@@ -3,55 +3,93 @@ import {Text, View} from 'react-native';
 import { Container } from './styles.js';
 import MenuOptions from "../MenuOptions";
 
-import {AccountCircle} from '@styled-icons/material'
+import {
+    Person,
+    Settings,
+    Campaign,
+    Book,
+    Notifications,
+    Info,
+    Lock,
+    Help
+} from '@styled-icons/material';
+
+import { ColorPalette } from '@styled-icons/evaicons-solid/ColorPalette';
 
 export default function Menu(){
     return (
         <Container>
             <View>
                 <MenuOptions
-                    icon={<AccountCircle />}
-                    iconName="user"
+                    icon={
+                        <Person
+                            size="35"
+                        />}
                     text="Editar Perfil"
                 />
 
                 <MenuOptions
-                    iconName="setting"
+                    icon={
+                        <Settings
+                            size="35"
+                        />}
                     text="Configurações"
                 />
 
                 <MenuOptions
-                    iconName="user"
+                    icon={
+                        <Campaign
+                            size="40"
+                        />}
                     text="Campanhas"
                 />
 
                 <MenuOptions
-                    iconName="user"
+                    icon={
+                        <Book
+                            size="35"
+                        />}
                     text="Cursos"
                 />
 
                 <MenuOptions
-                    iconName="user"
+                    icon={
+                        <Notifications
+                            size="35"
+                        />}
                     text="Notificações"
                 />
 
                 <MenuOptions
-                    iconName="user"
+                    icon={
+                        <Info
+                            size="35"
+                        />}
                     text="Sobre"
                 />
 
                 <MenuOptions
-                    iconName="user"
+                    icon={
+                        <Lock
+                            size="35"
+                        />}
                     text="Privacidade"
                 />
 
                 <MenuOptions
-                    iconName="user"
+                    icon={
+                        <Help
+                            size="35"
+                        />}
                     text="FAQ"
                 />
 
                 <MenuOptions
-                    iconName="user"
+                    icon={
+                        <ColorPalette
+                            size="35"
+                        />
+                    }
                     text="Tema"
                 />
 
