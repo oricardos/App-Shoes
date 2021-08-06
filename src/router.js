@@ -18,16 +18,16 @@ import Tests2 from "./pages/tests2";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function SettingsStack() {
-    return (
-        <Stack.Navigator>
-            <Stack.Screen
-                name="Test2"
-                component={Tests2}
-            />
-        </Stack.Navigator>
-    )
-}
+// function SettingsStack() {
+//     return (
+//         <Stack.Navigator>
+//             <Stack.Screen
+//                 name="Test2"
+//                 component={Tests2}
+//             />
+//         </Stack.Navigator>
+//     )
+// }
 
 
 function Routes() {
@@ -100,15 +100,15 @@ function Routes() {
                     }}
                 />
 
-                {/*<Tab.Screen*/}
-                {/*    name="Slide"*/}
-                {/*    component={SettingsStack}*/}
-                {/*    options={{*/}
-                {/*        tabBarIcon: ({size, color}) => (*/}
-                {/*            <Feather name="code" size={size} color={color}/>*/}
-                {/*        )*/}
-                {/*    }}*/}
-                {/*/>*/}
+                <Tab.Screen
+                    name="Menu"
+                    component={Tests2}
+                    options={{
+                        tabBarIcon: ({size, color}) => (
+                            <Feather name="menu" size={size} color={color}/>
+                        )
+                    }}
+                />
             </Tab.Navigator>
         </NavigationContainer>
     )
