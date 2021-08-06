@@ -4,13 +4,23 @@ import { AntDesign } from "@expo/vector-icons";
 
 import { Container, Option, TextOption } from "./styles";
 
-export default function MenuOptions({ iconName, text }) {
+function Icon ({ children }) {
+    return (
+        <>
+            {children}
+        </>
+    )
+}
+
+export default function MenuOptions({ text, icon }) {
     return (
         <>
             <TouchableOpacity>
                 <Container>
                     <Option>
-                        <AntDesign name={iconName} size={20} color="#757D8A"/>
+                        <Icon>
+                            {icon}
+                        </Icon>
                         <TextOption>{text}</TextOption>
                     </Option>
                     <AntDesign name="right" size={20} color="#757D8A"/>

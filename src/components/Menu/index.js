@@ -3,11 +3,14 @@ import {Text, View} from 'react-native';
 import { Container } from './styles.js';
 import MenuOptions from "../MenuOptions";
 
+import {AccountCircle} from '@styled-icons/material'
+
 export default function Menu(){
     return (
         <Container>
             <View>
                 <MenuOptions
+                    icon={<AccountCircle />}
                     iconName="user"
                     text="Editar Perfil"
                 />
