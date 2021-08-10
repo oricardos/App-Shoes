@@ -208,8 +208,6 @@ export default function Tests() {
                     text="FAQ"
                 />
             </View>
-
-
         </ScrollView>
     )
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, ScrollView} from 'react-native';
 import { Container } from './styles.js';
 import MenuOptions from "../MenuOptions";
 
@@ -19,7 +19,7 @@ import { ColorPalette } from '@styled-icons/evaicons-solid/ColorPalette';
 export default function Menu(){
     return (
         <Container>
-            <View>
+            <ScrollView>
                 <MenuOptions
                     icon={
                         <Person
@@ -93,7 +93,7 @@ export default function Menu(){
                     text="Tema"
                 />
 
-            </View>
+            </ScrollView>
         </Container>
     )
 };
