@@ -1,32 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Container, Btn, Text} from './styles';
+
+import { Add } from '@styled-icons/material';
 
 export default function Button() {
- return (
-   <View style={styles.container}>
-       <TouchableOpacity style={styles.btnContainer}>
-        <Text style={styles.text}>COMPRAR</Text>
-       </TouchableOpacity>
-   </View>
-  );
-}
+    return (
+        <Container>
+            <TouchableOpacity>
+                <Btn>
+                    <Text>
+                        <Add style={{ marginRight: 16 }}
+                            size="20"
+                        />
+                        Adicionar Campanha
+                    </Text>
+                </Btn>
+            </TouchableOpacity>
+        </Container>
 
-const styles = StyleSheet.create({
-    container:{
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    btnContainer:{
-        width: '90%',
-        height: 50,
-        backgroundColor: '#000',
-        borderRadius: 5,
-        marginVertical: '5%',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    text:{
-        color: '#FFF',
-        fontSize: 17,
-    }
-});
+    );
+}
