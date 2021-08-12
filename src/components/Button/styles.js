@@ -5,7 +5,7 @@ export const Container = styled.View`
 `;
 
 export const Btn = styled.View`
-  background-color: #2727AD;
+  background-color: var(--secondary);
   align-items: center;
   align-self: center;
   width: 90%;
@@ -14,7 +14,7 @@ export const Btn = styled.View`
 `;
 
 export const Text = styled.Text`
-  font-size: 18px;
+  font-size: ${props => `${props.fontSize}px`};
   font-weight: 500;
   color: #FFF;
 `;

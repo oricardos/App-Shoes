@@ -9,7 +9,18 @@ export default function Button() {
         <Container>
             <TouchableOpacity>
                 <Btn>
-                    <Text>
+                    <Text fontSize={14}>
+                        <Add style={{ marginRight: 16 }}
+                            size="20"
+                        />
+                        Adicionar Campanha
+                    </Text>
+                </Btn>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+                <Btn>
+                    <Text fontSize={24}>
                         <Add style={{ marginRight: 16 }}
                             size="20"
                         />
