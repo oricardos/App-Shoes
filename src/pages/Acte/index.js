@@ -2,10 +2,10 @@ import React from 'react';
 import { Text } from 'react-native';
 import { Container } from './styles.js';
 
-export default function MyComponent(){
+export default function Acte(){
     return (
         <Container>
-            <Text>My Component</Text>
+            <Text>Acte</Text>
         </Container>
     )
 };
