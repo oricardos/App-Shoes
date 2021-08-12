@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import { Container } from './styles.js';
 
-export default function Home({ navigation }){
+export default function MyComponent(){
     return (
         <Container>
             <Text>My Component</Text>
