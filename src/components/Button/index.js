@@ -4,30 +4,14 @@ import {Container, Btn, Text} from './styles';
 
 import { Add } from '@styled-icons/material';
 
-export default function Button() {
+export default function Button( { size, text }) {
     return (
         <Container>
-            <TouchableOpacity>
                 <Btn>
-                    <Text fontSize={14}>
-                        <Add style={{ marginRight: 16 }}
-                            size="20"
-                        />
-                        Adicionar Campanha
+                    <Text fontSize={size}>
+                        {text}
                     </Text>
                 </Btn>
-            </TouchableOpacity>
-
-            <TouchableOpacity>
-                <Btn>
-                    <Text fontSize={24}>
-                        <Add style={{ marginRight: 16 }}
-                            size="20"
-                        />
-                        Adicionar Campanha
-                    </Text>
-                </Btn>
-            </TouchableOpacity>
         </Container>
 
     );

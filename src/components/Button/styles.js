@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  padding-top: 50px;
+  
 `;
 
 export const Btn = styled.View`
@@ -10,7 +10,7 @@ export const Btn = styled.View`
   align-self: center;
   width: 90%;
   padding: 18px 50px;
-  border-radius: 8px;
+  border-radius: 50px;
 `;
 
 export const Text = styled.Text`
