@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
-import { Container } from './styles.js';
+import { View, Image } from 'react-native';
+import { Container, Title, Text } from './styles.js';
 
 import AppIntroSlider from 'react-native-app-intro-slider'; 
 
@@ -39,7 +39,7 @@ function renderSlides({ item }) {
                     width: '100%'
                 }}
             />
-            <Text>{ item.title }</Text>
+            <Title>{ item.title }</Title>
             <Text>{ item.text }</Text>
         </View>
     )
@@ -52,14 +52,18 @@ export default function Slide(){
         <Text>App</Text>
     } else {
         return(
-        <AppIntroSlider
-            renderItem={renderSlides}
-            data={slides}
-            activeDotStyle={{
-                backgroundColor: '#0056FE',
-                width: 30
-            }}
-        />
+            <>
+                <AppIntroSlider
+                    renderItem={renderSlides}
+                    data={slides}
+                    activeDotStyle={{
+                        backgroundColor: '#0056FE',
+                        width: 30
+                    }}
+
+                    renderDoneButton={ () => { <Text>Pular</Text>}}
+                />
+        </>
     )
     }
     
