@@ -9,21 +9,21 @@ const slides = [
         key: 'one',
         title: 'Title ',
         text: 'Description.\nSay something cool',
-        image: require('https://images.unsplash.com/photo-1520279026570-e5f6f947b2f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80'),
+        image: {uri: 'https://reactnative.dev/img/tiny_logo.png'},
         backgroundColor: '#59b2ab',
     },
     {
         key: 'two',
         title: 'Title 1',
         text: 'Other cool stuff',
-        image: require('https://images.unsplash.com/photo-1609675076051-89ee54b95732?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80'),
+        image: {uri: 'https://reactnative.dev/img/tiny_logo.png'},
         backgroundColor: '#febe29',
     },
     {
         key: 'three',
         title: 'Rocket guy',
         text: 'I\'m already out of descriptions\n\nLorem ipsum bla bla bla',
-        image: require('https://images.unsplash.com/photo-1518112166137-85f9979a43aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80'),
+        image: {uri: 'https://reactnative.dev/img/tiny_logo.png'},
         backgroundColor: '#22bcb5',
     }
 ];
