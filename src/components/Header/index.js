@@ -1,12 +1,13 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { Container } from './styles.js';
-import Header from './../../components/Header'
-export default function Notifications(){
+
+export default function Header(){
     return (
         <Container>
-            <Header />
-            <Text>Notifications</Text>
+            <Text>icon</Text>
+            <Text>My Component</Text>
+            <Text>Image</Text>
         </Container>
     )
 };
