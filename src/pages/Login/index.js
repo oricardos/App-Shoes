@@ -1,36 +1,36 @@
 import React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
+import {View, TouchableOpacity, Text} from 'react-native';
 
-import { ArrowIosBackOutline } from '@styled-icons/evaicons-outline/ArrowIosBackOutline';
-import { 
-    Container, 
-    LoginContent, 
-    Form, 
-    FormTitle, 
-    Input, 
+import {ArrowIosBackOutline} from '@styled-icons/evaicons-outline/ArrowIosBackOutline';
+import {
+    Container,
+    LoginContent,
+    Form,
+    FormTitle,
+    Input,
     Label,
     ForgotPassword
 } from './styles.js';
-import { SafeAreaView } from 'react-native';
+import {SafeAreaView} from 'react-native';
 import Button from '../../components/Button/index.js';
 
-export default function Login({ navigation }){
+export default function Login({navigation}) {
     return (
         <Container>
             <LoginContent>
                 <TouchableOpacity onPress={() => {
                     navigation.navigate('Acte')
                 }}>
-                    <ArrowIosBackOutline size="24" />                
+                    <ArrowIosBackOutline size="24"/>
                 </TouchableOpacity>
                 <Form>
                     <FormTitle>
                         Entrar
                     </FormTitle>
-                    
+
                     <SafeAreaView>
-                        <View style={{ marginVertical: 40}}>
-                            <Label style={{ marginBottom: 10 }}>
+                        <View style={{marginVertical: 40}}>
+                            <Label style={{marginBottom: 10}}>
                                 Email
                             </Label>
 
@@ -39,8 +39,8 @@ export default function Login({ navigation }){
                             />
                         </View>
 
-                        <View style={{ marginBottom: 40}}>
-                            <Label style={{ marginBottom: 10 }}>
+                        <View style={{marginBottom: 40}}>
+                            <Label style={{marginBottom: 10}}>
                                 Senha
                             </Label>
 
@@ -59,7 +59,7 @@ export default function Login({ navigation }){
                     </SafeAreaView>
 
                     <TouchableOpacity
-                        style={{ marginTop: 50, marginBottom: 32}}
+                        style={{marginTop: 50, marginBottom: 32}}
                         onPress={() => {
                             navigation.navigate('Slide')
                         }}
@@ -71,24 +71,23 @@ export default function Login({ navigation }){
                     </TouchableOpacity>
                 </Form>
 
-                
-                    <Text 
-                        style={{ 
-                            alignSelf: 'center',
-                            fontSize: 18
-                        }}
+
+                <Text
+                    style={{
+                        alignSelf: 'center',
+                        fontSize: 18
+                    }}
+                >
+                    Não tem uma conta?
+                    <TouchableOpacity
+
                     >
-                        Não tem uma conta?
-                        <TouchableOpacity
-                
-                        >
-                            <Text style={{fontWeight: 'bold'}}> Criar conta</Text>
-                        </TouchableOpacity>
-                        
-                    </Text>
+                        <Text style={{fontWeight: 'bold'}}> Criar conta</Text>
+                    </TouchableOpacity>
+
+                </Text>
             </LoginContent>
 
-            
 
         </Container>
     )

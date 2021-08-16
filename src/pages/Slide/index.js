@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
-import { Container, Title, Text } from './styles.js';
+import {View, Image, TouchableOpacity} from 'react-native';
+import {Container, Title, Text} from './styles.js';
 
-import AppIntroSlider from 'react-native-app-intro-slider'; 
+import AppIntroSlider from 'react-native-app-intro-slider';
 
 const slides = [
     {
@@ -28,52 +28,47 @@ const slides = [
     }
 ];
 
-function renderSlides({ item }) {
-    return(
-        <View style={{ flex: 1 }}>
+function renderSlides({item}) {
+    return (
+        <View style={{flex: 1}}>
             <Image
-                source={ item.image }
-                style={{ 
+                source={item.image}
+                style={{
                     resizeMode: 'cover',
                     height: '100%',
                     width: '100%'
                 }}
             />
-            <Title>{ item.title }</Title>
-            <Text>{ item.text }</Text>
+            <Title>{item.title}</Title>
+            <Text>{item.text}</Text>
         </View>
     )
 }
 
-export default function Slide({ navigation }){
-    const [showHome, setShowHome] = React.useState(false);
+export default function Slide({navigation}) {
 
-    if(showHome){
-        <Text>App</Text>
-    } else {
-        return(
-            <>
-                <AppIntroSlider
-                    renderItem={renderSlides}
-                    data={slides}
-                    activeDotStyle={{
-                        backgroundColor: '#0056FE',
-                        width: 30
-                    }}
-                    renderNextButton={() => <Text>Próximo</Text>}
+    return (
+        <>
+            <AppIntroSlider
+                renderItem={renderSlides}
+                data={slides}
+                activeDotStyle={{
+                    backgroundColor: '#0056FE',
+                    width: 30
+                }}
+                renderNextButton={() => <Text>Próximo</Text>}
 
-                    renderDoneButton={ () =>
-                        <TouchableOpacity onPress={() => {
-                            navigation.navigate('TabMenu')
-                        }
-                        }>
-                            <Text style={{ fontSize: 20, color: '#0056FE' }}>Iniciar</Text>
-                        </TouchableOpacity>
+                renderDoneButton={() =>
+                    <TouchableOpacity onPress={() => {
+                        navigation.navigate('TabMenu')
                     }
+                    }>
+                        <Text style={{fontSize: 20, color: '#0056FE'}}>Iniciar</Text>
+                    </TouchableOpacity>
+                }
 
-                />
+            />
         </>
     )
-    }
-    
+
 }
