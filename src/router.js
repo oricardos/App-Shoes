@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -35,19 +36,21 @@ const Stack = createStackNavigator();
 
 function Routes() {
     return (
-        <Stack.Navigator
-            screenOptions={{
-                headerShown: false
-            }}
-        >
-            <Stack.Screen name="Acte" component={Acte}/>
-            <Stack.Screen name="Login" component={Login}/>
-            <Stack.Screen name="Slide" component={Slide}/>
-            <Stack.Screen name="Forgot" component={Forgot}/>
-            <Stack.Screen name="Inicial" component={Inicial}/>
+        <NavigationContainer>
+            <Stack.Navigator
+                screenOptions={{
+                    headerShown: false
+                }}
+            >
+                <Stack.Screen name="Acte" component={Acte}/>
+                <Stack.Screen name="Login" component={Login}/>
+                <Stack.Screen name="Slide" component={Slide}/>
+                <Stack.Screen name="Forgot" component={Forgot}/>
+                <Stack.Screen name="Inicial" component={Inicial}/>
 
-            <Stack.Screen name="TabMenu" component={TabMenu}/>
-        </Stack.Navigator>
+                <Stack.Screen name="TabMenu" component={ TabMenu }/>
+            </Stack.Navigator>
+        </NavigationContainer>
     )
 }
 
