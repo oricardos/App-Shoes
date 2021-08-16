@@ -64,21 +64,13 @@ export default function Slide({ navigation }){
 
                     renderDoneButton={ () =>
                         <TouchableOpacity onPress={() => {
-                            navigation.navigate('Inicial')
+                            navigation.navigate('TabMenu')
                         }
                         }>
                             <Text style={{ fontSize: 20, color: '#0056FE' }}>Iniciar</Text>
                         </TouchableOpacity>
                     }
 
-                    onDone={() =>
-                        <TouchableOpacity onPress={() => {
-                            navigation.navigate('Inicial')
-                        }
-                        }>
-                            <Text style={{ fontSize: 20, color: '#0056FE' }}>Iniciar</Text>
-                        </TouchableOpacity>
-                    }
                 />
         </>
     )

@@ -7,54 +7,32 @@ import Acte from './pages/Acte';
 import Login from './pages/Login';
 import Slide from './pages/Slide';
 import Forgot from './pages/Forgot';
-import Inicial from './pages/Inicial'
+import Inicial from './pages/Inicial';
+
+
+import Home from './pages/Home';
+import Search from './pages/Search';
+import Dashboard from './pages/Dashboard';
+import Notifications from './pages/Notifications';
+import MenuTab from './pages/Menu'
+
+
+
+const Tab = createBottomTabNavigator();
+
+function TabMenu() {
+    return (
+        <Tab.Navigator>
+            <Tab.Screen name="Home" component={ Home }/>
+            <Tab.Screen name="Search" component={ Search } />
+            <Tab.Screen name="Dashboard" component={ Dashboard } />
+            <Tab.Screen name="Notifications" component={ Notifications } />
+            <Tab.Screen name="MenuTab" component={ MenuTab } />
+        </Tab.Navigator>
+    )
+}
 
 const Stack = createStackNavigator();
-
-
-// const Tab = createBottomTabNavigator();
-
-// function MyTabs() {
-//     return (
-//         <Tab.Navigator
-//             tabBarOptions={{
-//                 showLabel: false,
-//                 style: {
-//                     backgroundColor: '#FFF',
-//                     borderTopColor: '#C4C4C4',
-//                     height: 100,
-//                     elevation: 5,
-//                 },
-//                 activeTintColor: '#06f',
-//                 tabStyle: {
-//                     padding: 5,
-//                 }
-//             }}
-//         >
-//             <Tab.Screen
-//                 name="Home"
-//                 component={myStack}
-//                 options={{
-//                     tabBarIcon: ({size, color}) => (
-//                         <Entypo name="home" size={size} color={color}/>
-//                     )
-//                 }}
-//             />
-
-//             <Tab.Screen
-//                 name="Profile"
-//                 component={Profile}
-//                 options={{
-//                     tabBarIcon: ({size, color}) => (
-//                         <AntDesign name="user" size={size} color={color}/>
-//                     )
-//                 }}
-//             />
-//         </Tab.Navigator>
-//     )
-// }
-
-
 function Routes() {
     return (
         <NavigationContainer>
@@ -68,6 +46,8 @@ function Routes() {
                 <Stack.Screen name="Slide" component={ Slide } />
                 <Stack.Screen name="Forgot" component={ Forgot } />
                 <Stack.Screen name="Inicial" component={ Inicial } />
+
+                <Stack.Screen name="TabMenu" component={ TabMenu } />
             </Stack.Navigator>
             
         </NavigationContainer>
