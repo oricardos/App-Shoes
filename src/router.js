@@ -7,7 +7,7 @@ import Acte from './pages/Acte';
 import Login from './pages/Login';
 import Slide from './pages/Slide';
 import Forgot from './pages/Forgot';
-
+import Inicial from './pages/Inicial'
 
 const Stack = createStackNavigator();
 
@@ -67,6 +67,7 @@ function Routes() {
                 <Stack.Screen name="Login" component={ Login } />
                 <Stack.Screen name="Slide" component={ Slide } />
                 <Stack.Screen name="Forgot" component={ Forgot } />
+                <Stack.Screen name="Inicial" component={ Inicial } />
             </Stack.Navigator>
             
         </NavigationContainer>

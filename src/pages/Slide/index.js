@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import { Container, Title, Text } from './styles.js';
 
 import AppIntroSlider from 'react-native-app-intro-slider'; 
@@ -9,7 +9,7 @@ const slides = [
         key: 'one',
         title: 'Title ',
         text: 'Description.\nSay something cool',
-        image: {uri: 'https://reactnative.dev/img/tiny_logo.png'},
+        image: {uri: 'https://unsplash.com/photos/cuCrFcifq3Q'},
         backgroundColor: '#59b2ab',
     },
     {
@@ -35,7 +35,7 @@ function renderSlides({ item }) {
                 source={ item.image }
                 style={{ 
                     resizeMode: 'cover',
-                    height: '73%',
+                    height: '100%',
                     width: '100%'
                 }}
             />
@@ -45,7 +45,7 @@ function renderSlides({ item }) {
     )
 }
 
-export default function Slide(){
+export default function Slide({ navigation }){
     const [showHome, setShowHome] = React.useState(false);
 
     if(showHome){
@@ -60,8 +60,25 @@ export default function Slide(){
                         backgroundColor: '#0056FE',
                         width: 30
                     }}
+                    renderNextButton={() => <Text>Próximo</Text>}
 
-                    renderDoneButton={ () => { <Text>Pular</Text>}}
+                    renderDoneButton={ () =>
+                        <TouchableOpacity onPress={() => {
+                            navigation.navigate('Inicial')
+                        }
+                        }>
+                            <Text style={{ fontSize: 20, color: '#0056FE' }}>Iniciar</Text>
+                        </TouchableOpacity>
+                    }
+
+                    onDone={() =>
+                        <TouchableOpacity onPress={() => {
+                            navigation.navigate('Inicial')
+                        }
+                        }>
+                            <Text style={{ fontSize: 20, color: '#0056FE' }}>Iniciar</Text>
+                        </TouchableOpacity>
+                    }
                 />
         </>
     )
