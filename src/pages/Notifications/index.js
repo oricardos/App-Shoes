@@ -1,12 +1,22 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { Container } from './styles.js';
+import {Text, TouchableOpacity} from 'react-native';
+import {Container} from './styles.js';
 import Header from './../../components/Header'
-export default function Notifications(){
+import Button from "../../components/Button";
+
+export default function Notifications({ navigation }) {
     return (
         <Container>
-            <Header />
-            <Text>Notifications</Text>
+            <Header/>
+            <TouchableOpacity
+                onPress={() => {navigation.navigate('SubNotification')}}
+            >
+                <Button
+                size="18"
+                text="SubNotifications"
+            />
+            </TouchableOpacity>
+
         </Container>
     )
 };

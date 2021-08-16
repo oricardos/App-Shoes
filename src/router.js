@@ -9,7 +9,7 @@ import Login from './pages/Login';
 import Slide from './pages/Slide';
 import Forgot from './pages/Forgot';
 import Inicial from './pages/Inicial';
-
+import SubNotification from './pages/SubNotifications';
 
 import Home from './pages/Home';
 import Search from './pages/Search';
@@ -47,6 +47,7 @@ function Routes() {
                 <Stack.Screen name="Slide" component={Slide}/>
                 <Stack.Screen name="Forgot" component={Forgot}/>
                 <Stack.Screen name="Inicial" component={Inicial}/>
+                <Stack.Screen name="SubNotification" component={SubNotification} />
 
                 <Stack.Screen name="TabMenu" component={ TabMenu }/>
             </Stack.Navigator>

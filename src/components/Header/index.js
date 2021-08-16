@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { Container } from './styles.js';
+import { TouchableOpacity } from 'react-native';
+import { Container, Text } from './styles.js';
 
-export default function Header(){
+export default function Header({routes, navigation, onPress }){
     return (
         <Container>
-            <Text>icon</Text>
-            <Text>My Component</Text>
+
+            <Text>Notificações</Text>
             <Text>Image</Text>
         </Container>
     )
